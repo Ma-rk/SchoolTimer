@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SchoolTimer
 {
-    public partial class Form1 : Form
+    public partial class SchoolTimer : Form
     {
-        public Form1()
+        public SchoolTimer()
         {
             InitializeComponent();
         }
