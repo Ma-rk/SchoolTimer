@@ -41,7 +41,7 @@
             this.label_currentTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_currentTime.AutoSize = true;
             this.label_currentTime.Font = new System.Drawing.Font("Dotum", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_currentTime.Location = new System.Drawing.Point(115, 11);
+            this.label_currentTime.Location = new System.Drawing.Point(115, 12);
             this.label_currentTime.Name = "label_currentTime";
             this.label_currentTime.Size = new System.Drawing.Size(30, 29);
             this.label_currentTime.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.label_sprint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_sprint.AutoSize = true;
             this.label_sprint.Font = new System.Drawing.Font("Dotum", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_sprint.Location = new System.Drawing.Point(71, 59);
+            this.label_sprint.Location = new System.Drawing.Point(71, 61);
             this.label_sprint.Name = "label_sprint";
             this.label_sprint.Size = new System.Drawing.Size(118, 37);
             this.label_sprint.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.label_break.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_break.AutoSize = true;
             this.label_break.Font = new System.Drawing.Font("Dotum", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_break.Location = new System.Drawing.Point(71, 113);
+            this.label_break.Location = new System.Drawing.Point(71, 114);
             this.label_break.Name = "label_break";
             this.label_break.Size = new System.Drawing.Size(118, 37);
             this.label_break.TabIndex = 2;
