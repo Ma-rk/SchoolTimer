@@ -27,6 +27,28 @@ namespace SchoolTimer
         void timer_Tick(object sender, EventArgs e)
         {
             label_currentTime.Text = DateTime.Now.ToLongTimeString();
+
+            int min = DateTime.Now.Minute;
+            if (min < 45)
+                Do_sprint();
+            else
+                Do_break();
+        }
+
+        private void Do_sprint()
+        {
+            label_break.Text = "15:00";
+            label_sprint.Text = string.Format("{0}:{1}"
+                                            , DateTime.Now.Minute.ToString("D2")
+                                            , DateTime.Now.Second.ToString("D2"));
+        }
+
+        private void Do_break()
+        {
+            label_break.Text = string.Format("{0}:{1}"
+                                            , (DateTime.Now.Minute - 45).ToString("D2")
+                                            , DateTime.Now.Second.ToString("D2"));
+            label_sprint.Text = "45:00";
         }
     }
 }
