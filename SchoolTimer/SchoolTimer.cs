@@ -75,7 +75,7 @@ namespace SchoolTimer
 
         private bool CheckWorkingHour()
         {
-            if (8 <= DateTime.Now.Hour || DateTime.Now.Hour <= 18)
+            if (DateTime.Now.Hour <= 8 && 18 <= DateTime.Now.Hour)
                 return true;
 
             return false;
