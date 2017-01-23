@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTimer", "SchoolTimer\SchoolTimer.csproj", "{E366D117-CFC6-45CD-A95B-85CAA7DC1BB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTimerTests", "SchoolTimerTests\SchoolTimerTests.csproj", "{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E366D117-CFC6-45CD-A95B-85CAA7DC1BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E366D117-CFC6-45CD-A95B-85CAA7DC1BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E366D117-CFC6-45CD-A95B-85CAA7DC1BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
