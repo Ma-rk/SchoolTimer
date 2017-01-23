@@ -49,7 +49,7 @@ namespace SchoolTimer
 
         private void Do_sprint()
         {
-            if (CheckWorkingHour())
+            if (CheckWorkingHour(DateTime.Now))
                 if (DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                     m_Fur_Eliss_snd.Play();
 
@@ -62,7 +62,7 @@ namespace SchoolTimer
 
         private void Do_break()
         {
-            if (CheckWorkingHour())
+            if (CheckWorkingHour(DateTime.Now))
                 if (DateTime.Now.Minute == 45 && DateTime.Now.Second == 0)
                     m_Maiden_Prayer_snd.Play();
 
@@ -73,12 +73,18 @@ namespace SchoolTimer
                                             , DateTime.Now.Second.ToString("D2"));
         }
 
-        private bool CheckWorkingHour()
+        public bool CheckWorkingHour(DateTime now)
         {
-            if (DateTime.Now.Hour <= 8 && 18 <= DateTime.Now.Hour)
-                return true;
 
-            return false;
+            TimeSpan tsFrom = new TimeSpan(8, 0, 0);
+            TimeSpan tsTo = new TimeSpan(18, 0, 0);
+
+            if (TimeSpan.Compare(now.TimeOfDay, tsFrom) == -1)
+                return false;
+            if (TimeSpan.Compare(tsTo, now.TimeOfDay) != 1)
+                return false;
+
+            return true;
         }
     }
 }
