@@ -46,8 +46,8 @@ namespace SchoolTimer
                 if (i != 24)
                     cbx_hourFrom.Items.Add(i.ToString());
             }
-            cbx_hourFrom.SelectedIndex = 9;
-            cbx_hourTo.SelectedIndex = 20;
+            cbx_hourFrom.SelectedIndex = 8;
+            cbx_hourTo.SelectedIndex = 19;
 
             cbx_hourFrom.SelectedIndexChanged += new EventHandler(cbx_hour_SelectedIndexChanged);
             cbx_hourTo.SelectedIndexChanged += new EventHandler(cbx_hour_SelectedIndexChanged);
@@ -122,6 +122,12 @@ namespace SchoolTimer
         private void maidenPrayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             m_Maiden_Prayer_snd.Play();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string about = string.Format("School Timer. Ver 1.0{0}Creted by Ma-rk.{0}https://github.com/Ma-rk/SchoolTimer{0}All Rights Reserved.", Environment.NewLine);
+            MessageBox.Show(about, "About...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
