@@ -155,6 +155,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SchoolTimer";
             this.Text = "School Timer";
