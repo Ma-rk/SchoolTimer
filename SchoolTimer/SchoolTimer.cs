@@ -113,5 +113,15 @@ namespace SchoolTimer
 
             return true;
         }
+
+        private void furElissToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_Fur_Eliss_snd.Play();
+        }
+
+        private void maidenPrayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_Maiden_Prayer_snd.Play();
+        }
     }
 }

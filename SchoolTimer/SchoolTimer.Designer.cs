@@ -38,8 +38,13 @@
             this.cbx_hourFrom = new System.Windows.Forms.ComboBox();
             this.cbx_hourTo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.furElissToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maidenPrayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_currentTime
@@ -82,7 +87,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label_break, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label_currentTime, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_sprint, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 51);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 62);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -141,12 +146,45 @@
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbx_hourFrom, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(44, 19);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(44, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(201, 33);
             this.tableLayoutPanel2.TabIndex = 8;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.furElissToolStripMenuItem,
+            this.maidenPrayerToolStripMenuItem});
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.testToolStripMenuItem.Text = "Sount Test";
+            // 
+            // furElissToolStripMenuItem
+            // 
+            this.furElissToolStripMenuItem.Name = "furElissToolStripMenuItem";
+            this.furElissToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.furElissToolStripMenuItem.Text = "Fur Eliss...";
+            this.furElissToolStripMenuItem.Click += new System.EventHandler(this.furElissToolStripMenuItem_Click);
+            // 
+            // maidenPrayerToolStripMenuItem
+            // 
+            this.maidenPrayerToolStripMenuItem.Name = "maidenPrayerToolStripMenuItem";
+            this.maidenPrayerToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.maidenPrayerToolStripMenuItem.Text = "Maiden Prayer...";
+            this.maidenPrayerToolStripMenuItem.Click += new System.EventHandler(this.maidenPrayerToolStripMenuItem_Click);
             // 
             // SchoolTimer
             // 
@@ -155,15 +193,20 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "SchoolTimer";
             this.Text = "School Timer";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,6 +221,10 @@
         private System.Windows.Forms.ComboBox cbx_hourFrom;
         private System.Windows.Forms.ComboBox cbx_hourTo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem furElissToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem maidenPrayerToolStripMenuItem;
     }
 }
 
