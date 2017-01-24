@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SchoolTimer
@@ -20,10 +13,18 @@ namespace SchoolTimer
         private SoundPlayer m_Fur_Eliss_snd;
         private SoundPlayer m_Maiden_Prayer_snd;
 
+        private TimeSpan m_tsFrom;
+        private TimeSpan m_tsTo;
+
 
         public SchoolTimer()
         {
             InitializeComponent();
+
+            InitHourCbx();
+
+            m_tsFrom = new TimeSpan(8, 0, 0);
+            m_tsTo = new TimeSpan(19, 0, 0);
 
             label_currentTime.Text = DateTime.Now.ToLongTimeString();
 
@@ -34,6 +35,35 @@ namespace SchoolTimer
             timer.Interval = 1000;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
+        }
+
+        private void InitHourCbx()
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                if (i != 0)
+                    cbx_hourTo.Items.Add(i.ToString());
+                if (i != 24)
+                    cbx_hourFrom.Items.Add(i.ToString());
+            }
+            cbx_hourFrom.SelectedIndex = 9;
+            cbx_hourTo.SelectedIndex = 20;
+
+            cbx_hourFrom.SelectedIndexChanged += new EventHandler(cbx_hour_SelectedIndexChanged);
+            cbx_hourTo.SelectedIndexChanged += new EventHandler(cbx_hour_SelectedIndexChanged);
+        }
+
+        private void cbx_hour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbx_hourFrom.SelectedIndex > cbx_hourTo.SelectedIndex)
+            {
+                if ((ComboBox)sender == cbx_hourFrom)
+                    cbx_hourTo.SelectedIndex = cbx_hourFrom.SelectedIndex;
+                else
+                    cbx_hourFrom.SelectedIndex = cbx_hourTo.SelectedIndex;
+            }
+            m_tsFrom = new TimeSpan(Convert.ToInt32(cbx_hourFrom.SelectedItem), 0, 0);
+            m_tsTo = new TimeSpan(Convert.ToInt32(cbx_hourTo.SelectedItem), 0, 0);
         }
 
         void timer_Tick(object sender, EventArgs e)
@@ -76,12 +106,9 @@ namespace SchoolTimer
         public bool CheckWorkingHour(DateTime now)
         {
 
-            TimeSpan tsFrom = new TimeSpan(8, 0, 0);
-            TimeSpan tsTo = new TimeSpan(18, 0, 0);
-
-            if (TimeSpan.Compare(now.TimeOfDay, tsFrom) == -1)
+            if (TimeSpan.Compare(now.TimeOfDay, m_tsFrom) == -1)
                 return false;
-            if (TimeSpan.Compare(tsTo, now.TimeOfDay) != 1)
+            if (TimeSpan.Compare(m_tsTo, now.TimeOfDay) != 1)
                 return false;
 
             return true;
