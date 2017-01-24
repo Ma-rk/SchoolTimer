@@ -7,8 +7,8 @@ namespace SchoolTimer
 
     public partial class SchoolTimer : Form
     {
-        private readonly string m_Fur_Eliss = Application.StartupPath + @"\Fur_Eliss.wav";
-        private readonly string m_Maiden_Prayer = Application.StartupPath + @"\Maiden_Prayer.wav";
+        //private readonly string m_Fur_Eliss = Application.StartupPath + @"\Fur_Eliss.wav";
+        //private readonly string m_Maiden_Prayer = Application.StartupPath + @"\Maiden_Prayer.wav";
 
         private SoundPlayer m_Fur_Eliss_snd;
         private SoundPlayer m_Maiden_Prayer_snd;
@@ -28,8 +28,8 @@ namespace SchoolTimer
 
             label_currentTime.Text = DateTime.Now.ToLongTimeString();
 
-            m_Fur_Eliss_snd = new SoundPlayer(m_Fur_Eliss);
-            m_Maiden_Prayer_snd = new SoundPlayer(m_Maiden_Prayer);
+            m_Fur_Eliss_snd = new SoundPlayer(Properties.Resources.Fur_Eliss);
+            m_Maiden_Prayer_snd = new SoundPlayer(Properties.Resources.Maiden_Prayer);
 
             Timer timer = new Timer();
             timer.Interval = 1000;
