@@ -129,5 +129,11 @@ namespace SchoolTimer
             string about = string.Format("School Timer. Ver 1.0{0}Creted by Ma-rk.{0}https://github.com/Ma-rk/SchoolTimer{0}All Rights Reserved.", Environment.NewLine);
             MessageBox.Show(about, "About...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btn_stop_Click(object sender, EventArgs e)
+        {
+            m_Fur_Eliss_snd.Stop();
+            m_Maiden_Prayer_snd.Stop();
+        }
     }
 }

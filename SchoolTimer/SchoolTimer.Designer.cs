@@ -43,6 +43,7 @@
             this.furElissToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maidenPrayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_stop = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -53,7 +54,7 @@
             this.label_currentTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_currentTime.AutoSize = true;
             this.label_currentTime.Font = new System.Drawing.Font("Dotum", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_currentTime.Location = new System.Drawing.Point(115, 12);
+            this.label_currentTime.Location = new System.Drawing.Point(115, 8);
             this.label_currentTime.Name = "label_currentTime";
             this.label_currentTime.Size = new System.Drawing.Size(30, 29);
             this.label_currentTime.TabIndex = 0;
@@ -64,7 +65,7 @@
             this.label_sprint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_sprint.AutoSize = true;
             this.label_sprint.Font = new System.Drawing.Font("Dotum", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_sprint.Location = new System.Drawing.Point(71, 61);
+            this.label_sprint.Location = new System.Drawing.Point(71, 49);
             this.label_sprint.Name = "label_sprint";
             this.label_sprint.Size = new System.Drawing.Size(118, 37);
             this.label_sprint.TabIndex = 1;
@@ -75,7 +76,7 @@
             this.label_break.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_break.AutoSize = true;
             this.label_break.Font = new System.Drawing.Font("Dotum", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_break.Location = new System.Drawing.Point(71, 114);
+            this.label_break.Location = new System.Drawing.Point(71, 94);
             this.label_break.Name = "label_break";
             this.label_break.Size = new System.Drawing.Size(118, 37);
             this.label_break.TabIndex = 2;
@@ -94,7 +95,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 159);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 135);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label1
@@ -195,11 +196,22 @@
             this.aboutToolStripMenuItem.Text = "About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // btn_stop
+            // 
+            this.btn_stop.Location = new System.Drawing.Point(12, 203);
+            this.btn_stop.Name = "btn_stop";
+            this.btn_stop.Size = new System.Drawing.Size(260, 46);
+            this.btn_stop.TabIndex = 10;
+            this.btn_stop.Text = "Stop";
+            this.btn_stop.UseVisualStyleBackColor = true;
+            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
+            // 
             // SchoolTimer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
@@ -235,6 +247,7 @@
         private System.Windows.Forms.ToolStripMenuItem furElissToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maidenPrayerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button btn_stop;
     }
 }
 
