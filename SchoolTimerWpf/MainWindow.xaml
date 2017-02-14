@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchoolTimerWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="School Timer" Height="316" Width="358.375">
+    <Grid Margin="10,10,2,9">
+        <Label x:Name="label_currentTime" Content="-" HorizontalAlignment="Left" Margin="64,42,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_sprint" Content="45:00" HorizontalAlignment="Left" Margin="117,90,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_break" Content="15:00" HorizontalAlignment="Left" Margin="117,140,0,0" VerticalAlignment="Top" FontSize="30"/>
     </Grid>
 </Window>
