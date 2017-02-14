@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTimer", "SchoolTimer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTimerTests", "SchoolTimerTests\SchoolTimerTests.csproj", "{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTimerWpf", "SchoolTimerWpf\SchoolTimerWpf.csproj", "{E4192894-660B-4684-9268-4D7F6BE08F13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A16DDE28-2AE1-4DB6-81BD-268C015F0F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4192894-660B-4684-9268-4D7F6BE08F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4192894-660B-4684-9268-4D7F6BE08F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4192894-660B-4684-9268-4D7F6BE08F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4192894-660B-4684-9268-4D7F6BE08F13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
